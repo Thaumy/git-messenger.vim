@@ -77,7 +77,6 @@ function! s:blame__open_popup() dict abort
     let opts = {
         \   'filetype': 'gitmessengerpopup',
         \   'mappings': {
-        \       'q': [{-> execute('close', '')}, 'Close popup window'],
         \       'o': [funcref(self.back, [], self), 'Back to older commit'],
         \       'O': [funcref(self.forward, [], self), 'Forward to newer commit'],
         \       'd': [funcref(self.reveal_diff, [v:false, v:false], self), "Toggle current file's diffs"],
